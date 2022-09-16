@@ -1,0 +1,6 @@
+#### Django ####
+
+__pycache__/
+
+venv/
+api/__pycache__/
