@@ -257,10 +257,10 @@ class LogoutView(APIView):
 
 
 class NotesView(APIView):
-    permission_classes = [CustomerAccessPermission]
+    # permission_classes = [CustomerAccessPermission]
 
     def get(self, request):
-        notes = Notes.objects.all()
+        notes = Notes.objects.all().order_by("-updated_at")
         serializer = NoteSerializer(notes, many=True)
         return Response(serializer.data)
 
@@ -268,13 +268,13 @@ class NotesView(APIView):
         serializer = NoteSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return {}, 201
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class NoteView(APIView):
-    permission_classes = [CustomerAccessPermission]
+    # permission_classes = [CustomerAccessPermission]
 
-    def get(self, pk):
+    def get(self, request, pk):
         note = Notes.objects.get(id=pk)
         serializer = NoteSerializer(note, many=False)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -286,6 +286,6 @@ class NoteView(APIView):
         serializer.save()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-    def delete(self, pk):
+    def delete(self, request, pk):
         note = Notes.objects.get(id=pk).delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

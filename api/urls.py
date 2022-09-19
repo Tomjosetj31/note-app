@@ -39,5 +39,5 @@ urlpatterns = [
     ),
     path("change-password", ChangePasswordView.as_view(), name="change-password"),
     path("notes/", NotesView.as_view(), name="get_notes"),
-    path("notes/<str:pk>/", NoteView.as_view(), name="note"),
+    path("notes/<str:pk>", NoteView.as_view(), name="note"),
 ]
