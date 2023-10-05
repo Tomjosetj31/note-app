@@ -1,9 +1,8 @@
 #### Django ####
 
-__pycache__/
-
-venv/
-api/__pycache__/
+backend/__pycache__/
+backend/venv/
+backend/api/__pycache__/
 
 # frontend dependencies
 frontend/node_modules
