@@ -18,7 +18,7 @@ Follow these steps to set up and run the Django Note App on your local machine:
 1. **Clone the Repository**:
 
    ```
-   git clone https://github.com/yourusername/django-note-app.git
+   git clone https://github.com/Tomjosetj31/note-app.git
    cd note-app
    ```
 
