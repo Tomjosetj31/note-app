@@ -1,6 +1,6 @@
-# Django Note App
+# Note App
 
-Django Note App is a web application that allows users to create, view, edit, and delete notes. This app provides a simple and user-friendly interface for managing your notes effectively.
+Note App is a web application that allows users to create, view, edit, and delete notes. This app provides a simple and user-friendly interface for managing your notes effectively.
 
 ## Features
 
@@ -13,13 +13,21 @@ Django Note App is a web application that allows users to create, view, edit, an
 
 ## Installation
 
-Follow these steps to set up and run the Django Note App on your local machine:
+Follow these steps to set up and run the Note App on your local machine:
 
-1. **Clone the Repository**:
+**Clone the Repository**:
+
+```
+git clone https://github.com/Tomjosetj31/note-app.git
+cd note-app
+```
+
+### Run Django Backend
+
+1. **Go to the backend directory**:
 
    ```
-   git clone https://github.com/Tomjosetj31/note-app.git
-   cd note-app
+   cd backend
    ```
 
 2. **Create a Virtual Environment**:
@@ -54,7 +62,7 @@ Follow these steps to set up and run the Django Note App on your local machine:
    python manage.py runserver
    ```
 
-# Run React Frontend
+### Run React Frontend
 
 1. **Go to the frontend directory**:
 
